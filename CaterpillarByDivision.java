@@ -59,7 +59,7 @@ public static void main(String args[])
 		catr[i]=Integer.parseInt(args[2+i]);
 	
 	
-	for(i=k-1;i>-1;i--)								//Finding the LCMs and storing them in list;
+	for(i=k-1;i>-1;i--)						//Finding the LCMs and storing them in list;
 	{
 		for(j=i-1;j>-1;j--)
 		{
@@ -77,17 +77,17 @@ public static void main(String args[])
 	}
 	
 	
-	for(i=0;i<k;i++)
+	for(i=0;i<k;i++)						//Finding no. of leaves ate by each caterpillar;
 	{
-		cnt=cnt+(n/catr[i]);						//Finding no. of leaves ate by each caterpillar;
+		cnt=cnt+(n/catr[i]);						
 	}
 	
-	for(i=0;i<lcm.size();i++)
+	for(i=0;i<lcm.size();i++)					//Finding the no. of leaves commonly ate by caterpillars;
 	{
-		lcm_cnt=lcm_cnt+(n/lcm.get(i));				//Finding the no. of leaves commonly ate by caterpillars;
+		lcm_cnt=lcm_cnt+(n/lcm.get(i));				
 	}
 	
 	
-	System.out.println(n-(cnt-lcm_cnt+1));
+	System.out.println(n-(cnt-lcm_cnt+1));				//Printing the no. of uneaten leaves.
 }
 }
